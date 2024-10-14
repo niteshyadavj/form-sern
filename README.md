@@ -61,3 +61,42 @@ CREATE TABLE forms (
 6.  Excel Sheet
 - Use a library like xlsx or Google Sheets API to connect the SQL database to an external Excel sheet.
 - Include a "Refresh" button to update the Excel sheet with new entries from the database.
+
+## Installation 
+1. nistallation
+```bash
+git clone https://github.com/niteshyadavj/form-sern.git
+cd backend
+npm install
+```
+2.  MySQL Database Setup: Create a database named form_sern and a table to store form data:
+```bash
+CREATE DATABASE formApp;
+USE formApp;
+CREATE TABLE forms (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    formType VARCHAR(50),
+    name VARCHAR(100),
+    countryCode VARCHAR(10),
+    phoneNumber VARCHAR(15)
+);
+```
+
+3. Configure environment variables
+```bash
+DB_pass = password
+PORT = '3001'
+```
+4. backend start
+```bash
+node server.js
+```
+5. front end setup
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+
+
